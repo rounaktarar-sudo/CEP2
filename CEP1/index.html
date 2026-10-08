@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<script>try{var _t=localStorage.getItem("cgn_theme");if(_t)document.documentElement.setAttribute("data-theme",_t);}catch(e){}</script>
+<title>Clean & Green Nandapuri</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌿</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="ack.css">
+<script src="config.js"></script>
+</head>
+<body>
+<header>
+  <div class="navwrap">
+    <div class="logo" id="siteLogo">🌿 Clean & Green Nandapuri</div>
+    <nav id="nav"></nav>
+    <button class="adminbtn" id="langBtn" onclick="setLang(LANG==='en'?'hi':'en')">🌐 हिं/EN</button>
+    <button class="adminbtn themebtn" id="themeBtn" onclick="toggleTheme()" aria-label="Toggle dark or light mode" title="Dark / Light">🌙</button>
+    <button class="adminbtn" id="userBtn" onclick="go('auth')">👤 Login</button>
+    <button class="adminbtn" id="adminNavBtn" onclick="go('admin')">🔐 Admin</button>
+    <button class="cta" id="headerCta" onclick="go('report')">🗑️ Report Garbage</button>
+  </div>
+</header>
+<main id="view"></main>
+<footer>
+  <div class="fline" id="footerMsg">🌿 Together, we can make Nandapuri cleaner, greener and healthier.</div>
+  <div class="small">A student community-tech project for Nandapuri village &middot; स्वच्छ नंदापुरी, हरित नंदापुरी</div>
+</footer>
+<div class="camwrap hidden" id="camwrap"><div class="cambox">
+  <video id="camvideo" autoplay playsinline muted></video>
+  <div class="camctl"><button class="snap" id="camSnap" onclick="snapPhoto()">📸</button><button id="camFlip" onclick="flipCamera()">🔄</button><button id="camClose" onclick="closeCamera()">✕</button></div>
+</div></div>
+<div class="toast" id="toast"></div>
+
+<script src="ack.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

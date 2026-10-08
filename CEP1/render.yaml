@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: clean-green-nandapuri
+    runtime: node
+    plan: free
+    buildCommand: echo "no build"
+    startCommand: node backend/server.js
+    # Free plan has no persistent disk: data resets on redeploy/sleep.
+    # For permanent data, use a paid plan and add:
+    # disk: { name: data, mountPath: /var/data, sizeGB: 1 }
+    # envVars: [{ key: DATA_DIR, value: /var/data }]
